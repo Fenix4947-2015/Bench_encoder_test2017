@@ -10,7 +10,7 @@ import org.usfirst.frc.team4947.robot.Robot;
 public class ExampleCommand extends Command {
 	public ExampleCommand() {
 		// Use requires() here to declare subsystem dependencies
-		requires(Robot.exampleSubsystem);
+		requires(Robot.motorSubsystem);
 	}
 
 	// Called just before this Command runs the first time
@@ -21,6 +21,7 @@ public class ExampleCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
+		Robot.motorSubsystem.motor1.set(0.25);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
